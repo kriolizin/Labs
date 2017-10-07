@@ -1,54 +1,159 @@
 #include <iostream>
-#include <omp.h>
-#include <ctime>
+#include <string>
+#include <list>
+#include <vector>
+#include <windows.h>
 
 using namespace std;
 
-void main() {
-	cout << "Input N, x and k: ";
-	int x, k;
-	long n;
+enum Lang { Rus, Eng };
 
-	cin >> n >> x >> k;
+vector<string> alphEng = {
+	{ "abcde" },
+	{ "fghik" },
+	{ "lmnop" },
+	{ "qrstu" },
+	{ "vwxyz" } };
 
-	double *arrayA, *arrayB, *arrayC;
+vector<string> alphRus = {
+	{ "абвгде" },
+	{ "жзиклм" },
+	{ "нопрст" },
+	{ "уфхцчш" },
+	{ "щыьэюя" } };
 
-	arrayA = new double[n];
-	arrayB = new double[n];
-	arrayC = new double[n];
+vector<string> *alph;
 
-	arrayA[0] = x;
-	arrayB[0] = 1 / x;
+bool find(int *dataSpace, char subj) {
 
-	for (long i = 1; i < n; i++) {
-		arrayA[i] = (sin(x*i) + pow(x, 2) / i);
-		arrayB[i] = (arrayB[i - 1] + x) / i;
+
+
+	string str;
+	vector<string>::iterator it = alph->begin();
+
+	for (int i = 0; it < alph->end(); it++, i++) {
+
+		for (int j = 0; j < (*it).length(); j++)
+			if ((*it)[j] == subj) {
+				dataSpace[0] = i;
+				dataSpace[1] = j;
+
+				return true;
+			}
 	}
+	return false;
+}
 
-	double time = clock();
+void BeepFunction(list<int> str) {
 
-	omp_set_num_threads(k);
+	list<int>::iterator it = str.begin();
 
-#pragma omp parallel
-	{
-		int thread_num = omp_get_thread_num(), nStart, nFinish;
-
-		nStart = thread_num * (int)((n / k) + 0.5);
-		nFinish = (thread_num == (k - 1)) ? n : (thread_num + 1) * (int)((n / k) + 0.5);
-
-		for (long i = nStart; i < nFinish; i++) {
-			arrayC[i] = arrayA[i] - arrayB[n - i - 1];
-			arrayB[i] = (arrayA[i] + arrayC[i]) / 2;
+	for (; it != str.end(); it++) {
+		for (int j = 0; j < (*it); j++) {
+			Beep(400, 100);
+			Sleep(200);
 		}
+
+		Sleep(400);
 	}
 
-	time = (clock() - time) / CLK_TCK;
+}
 
-	cout << "\nCalc time: " << time << "\nA\t\tB\t\tC";
+void EncryptString(string str, Lang lang) {
 
-	for (long i = 0; i < n; i++) {
-		cout.precision(3);
-		cout << '\n' << arrayA[i] << "\t\t" << arrayB[i] << "\t\t" << arrayC[i];
+	alph = (lang == Eng ? &alphEng : &alphRus);
+
+	string encryptedStr = "";
+	list<int> encryptedNums;
+
+	for (int i = 0; i < str.length(); i++) {
+		int *encryptedNum = new int[2];
+		if (!find(encryptedNum, str[i]))
+			continue;
+
+		encryptedNums.push_back(encryptedNum[0]+1);
+		encryptedNums.push_back(encryptedNum[1]+1);
+
+		if (encryptedNum[0] == (alph->size() - 1))
+			encryptedNum[0] = 0;
+		else
+			encryptedNum[0] += 1;
+
+
+		vector<string>::iterator it = alph->begin();
+		for (int j = 0; j < encryptedNum[0]; j++, it++);
+
+		encryptedStr += (*it)[encryptedNum[1]];
 	}
 
+	list<int>::iterator it = encryptedNums.begin();
+
+	cout << "\nЗашифрованное цифрами сообщение: ";
+	for (; it != encryptedNums.end(); it++) {
+		cout << *it;
+	}
+
+	cout << "\nЗашифрованное буквами сообщение: ";
+	cout << encryptedStr;
+
+	cout << "\n";
+	system("pause");
+	BeepFunction(encryptedNums);
+
+
+}
+
+void DecryptString(string str, Lang lang) {
+
+	alph = (lang == Eng ? &alphEng : &alphRus);
+
+	string decryptedStr = "";
+
+	for (int i = 0; i < str.length(); i++) {
+		int *decryptedNum = new int[2];
+		if (!find(decryptedNum, str[i]))
+			continue;
+
+		if (decryptedNum[0] == 0)
+			decryptedNum[0] = alph->size() - 1;
+		else
+			decryptedNum[0] -= 1;
+
+		vector<string>::iterator it = alph->begin();
+		for (int j = 0; j < decryptedNum[0]; j++, it++);
+
+		decryptedStr += (*it)[decryptedNum[1]];
+	}
+
+	cout << "\nРасшифрованное сообщение: ";
+	cout << decryptedStr << '\n';
+}
+
+void main_menu() {
+	cout << "Зашифровать.\n\n1: Русский язык.\n2: Английский язык.\n\nРасшифровать.\n\n3: Русский язык.\n4: Английский язык.\n\n >> ";
+	int menuPointer = 0;
+	cin >> menuPointer;
+
+	Lang lang = (menuPointer % 2 == 1) ? Rus : Eng;
+
+
+
+	cout << "\nВведите строку: ";
+	string str;
+	cin >> str;
+
+	if (menuPointer <= 2)
+		EncryptString(str, lang);
+	else 
+		DecryptString(str, lang);
+	
+
+
+}
+
+void main() {
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
+	main_menu();
 }
