@@ -1,0 +1,16 @@
+D:\Projects\VS2010\Lab1_\_Lab1\obj\x86\Debug\_Lab1.Form1.resources
+D:\Projects\VS2010\Lab1_\_Lab1\obj\x86\Debug\_Lab1.Properties.Resources.resources
+D:\Projects\VS2010\Lab1_\_Lab1\obj\x86\Debug\_Lab1.csproj.GenerateResource.Cache
+D:\Projects\VS2010\Lab1_\_Lab1\bin\Debug\_Lab1.exe
+D:\Projects\VS2010\Lab1_\_Lab1\bin\Debug\_Lab1.pdb
+D:\Projects\VS2010\Lab1_\_Lab1\obj\x86\Debug\_Lab1.exe
+D:\Projects\VS2010\Lab1_\_Lab1\obj\x86\Debug\_Lab1.pdb
+D:\Projects\VS2010\Lab1_\_Lab1\obj\x86\Debug\_Lab1.csprojResolveAssemblyReference.cache
+D:\Study\5 семестр\ПиР ВС\Сквозная лабораторная работа 1\Lab1_\_Lab1\bin\Debug\_Lab1.exe
+D:\Study\5 семестр\ПиР ВС\Сквозная лабораторная работа 1\Lab1_\_Lab1\bin\Debug\_Lab1.pdb
+D:\Study\5 семестр\ПиР ВС\Сквозная лабораторная работа 1\Lab1_\_Lab1\obj\x86\Debug\_Lab1.csprojResolveAssemblyReference.cache
+D:\Study\5 семестр\ПиР ВС\Сквозная лабораторная работа 1\Lab1_\_Lab1\obj\x86\Debug\_Lab1.Form1.resources
+D:\Study\5 семестр\ПиР ВС\Сквозная лабораторная работа 1\Lab1_\_Lab1\obj\x86\Debug\_Lab1.Properties.Resources.resources
+D:\Study\5 семестр\ПиР ВС\Сквозная лабораторная работа 1\Lab1_\_Lab1\obj\x86\Debug\_Lab1.csproj.GenerateResource.Cache
+D:\Study\5 семестр\ПиР ВС\Сквозная лабораторная работа 1\Lab1_\_Lab1\obj\x86\Debug\_Lab1.exe
+D:\Study\5 семестр\ПиР ВС\Сквозная лабораторная работа 1\Lab1_\_Lab1\obj\x86\Debug\_Lab1.pdb

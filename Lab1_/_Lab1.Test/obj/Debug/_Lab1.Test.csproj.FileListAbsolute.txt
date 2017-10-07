@@ -1,0 +1,17 @@
+D:\Projects\VS2010\Lab1_\_Lab1.Test\bin\Debug\_Lab1.Test.dll
+D:\Projects\VS2010\Lab1_\_Lab1.Test\bin\Debug\_Lab1.Test.pdb
+D:\Projects\VS2010\Lab1_\_Lab1.Test\bin\Debug\_Lab1.exe
+D:\Projects\VS2010\Lab1_\_Lab1.Test\bin\Debug\_Lab1.pdb
+D:\Projects\VS2010\Lab1_\_Lab1.Test\obj\Debug\_Lab1.Test.csprojResolveAssemblyReference.cache
+D:\Projects\VS2010\Lab1_\_Lab1.Test\obj\Debug\_Lab1.Test.dll
+D:\Projects\VS2010\Lab1_\_Lab1.Test\obj\Debug\_Lab1.Test.pdb
+D:\Projects\VS2010\Lab1_\_Lab1.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Projects\VS2010\Lab1_\_Lab1.Test\obj\Debug\_Lab1.Test.csproj.CoreCompileInputs.cache
+D:\Study\5 семестр\ПиР ВС\Сквозная лабораторная работа 1\Lab1_\_Lab1.Test\bin\Debug\_Lab1.Test.dll
+D:\Study\5 семестр\ПиР ВС\Сквозная лабораторная работа 1\Lab1_\_Lab1.Test\bin\Debug\_Lab1.Test.pdb
+D:\Study\5 семестр\ПиР ВС\Сквозная лабораторная работа 1\Lab1_\_Lab1.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Study\5 семестр\ПиР ВС\Сквозная лабораторная работа 1\Lab1_\_Lab1.Test\bin\Debug\_Lab1.exe
+D:\Study\5 семестр\ПиР ВС\Сквозная лабораторная работа 1\Lab1_\_Lab1.Test\bin\Debug\_Lab1.pdb
+D:\Study\5 семестр\ПиР ВС\Сквозная лабораторная работа 1\Lab1_\_Lab1.Test\obj\Debug\_Lab1.Test.csprojResolveAssemblyReference.cache
+D:\Study\5 семестр\ПиР ВС\Сквозная лабораторная работа 1\Lab1_\_Lab1.Test\obj\Debug\_Lab1.Test.dll
+D:\Study\5 семестр\ПиР ВС\Сквозная лабораторная работа 1\Lab1_\_Lab1.Test\obj\Debug\_Lab1.Test.pdb
